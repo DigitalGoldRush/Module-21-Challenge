@@ -1,6 +1,6 @@
 # Module-21-Challenge: Creating a ERC20-Token ICO
 
-![https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/Readme%20jpeg.jpeg](https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/Readme%20jpeg.jpeg)
+![https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/README%20pic.jpg](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/README%20pic.jpg)
 
 ## 1. Overview of the Project
 
