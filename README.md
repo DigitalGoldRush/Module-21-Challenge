@@ -13,7 +13,8 @@ In this project, we will create an ERC20 token using the OpenZeppelin Solidity l
     1. Create the KaseiCoin token contract
     2. Create the KaseiCoin Crowdsale contract
     3. Create the KaseiCoin deployer contract
-    4. Perform a real-world, pre-production test of your crowdsale by deploying to a local blockchain by using Remix, MetaMask, and Ganache.
+    4. Deploy to a local blockchain
+    4. Perform a pre-production test by using Remix, MetaMask, and Ganache.
 
 ---
 
