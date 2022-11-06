@@ -40,8 +40,8 @@ In this project, we will create an ERC20 token using the OpenZeppelin Solidity l
 ### 6. Transfer KAI tokens
 
 ![withdraw gif](
- 
-    
+
+
 ---
 
 ## Technology Used
@@ -49,6 +49,8 @@ In this project, we will create an ERC20 token using the OpenZeppelin Solidity l
 [![Solidity](https://img.shields.io/badge/Solidity-000000?style=for-the-badge&logo=solidity&logoColor=white)](https://docs.soliditylang.org/en/v0.8.7/)
 
 [![Remix-IDE](https://img.shields.io/badge/Remix_IDE-1989b9?style=for-the-badge&logo=remix&logoColor=white)](https://remix.ethereum.org/)
+
+[![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
 
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DigitalGoldRush?tab=repositories)
 
