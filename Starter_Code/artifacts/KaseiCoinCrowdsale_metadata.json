@@ -186,10 +186,10 @@
 			]
 		},
 		"Module 21- Advanced Solidity/Module-21-Challenge/Starter_Code/KaseiCoinCrowdsale.sol": {
-			"keccak256": "0xbeb22586b905bec6925de399e20cee0262e0428f76f8a6a8c7d1489fb20b9a54",
+			"keccak256": "0x9b5db42e410ab1beda27aa1d6dd2f5f383d272d14de0d34cc5937a898d5d504a",
 			"urls": [
-				"bzz-raw://629afb3979fa2844409b778e6e5adcc69fca70ee7f766ce22e36f524d410e983",
-				"dweb:/ipfs/QmZo9rix6yY9dYc6bC8y4VNyvM5NxTy7FQMye9Cp91uEfm"
+				"bzz-raw://02e1655fcfffc9822419541443ee14106858ad36975379dc773f2512b921534d",
+				"dweb:/ipfs/QmR35a2efiCJZN7TzBpnYfY2Ak2zysnYcJJ3qqE4DYsoSo"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/GSN/Context.sol": {
