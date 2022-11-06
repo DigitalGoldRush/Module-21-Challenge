@@ -1,30 +1,39 @@
 # Module-21-Challenge: Creating a ERC20-Token ICO
+# Module-21-Challenge: Creating an ERC20 token using Crowdsale
 
 ![https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/README%20pic.jpg](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/README%20pic.jpg)
 
 ## 1. Overview of the Project
 
 In this project, we will create a smart contract using Solidity and deploy it to the Javascript VM. The smart contract will use ether management functions to implement a financial institution. The smart contract will be able to accept deposits, withdraw funds, and check balances. The smart contract will also be able to transfer funds between accounts.
+In this project, we will create an ERC20 token using the OpenZeppelin Solidity library. We will also create a Crowdsale contract that will manage the entire process, allowing users to send ETH and get back DGR tokens. The contract will mint the tokens automatically and distribute them to buyers in one transaction.
 
 ## 2. Steps Involved
 
     1. Create a Joint Savings Account Contract in Solidity
     2. Compile and Deploy Your Contract in the JavaScript VM
     3. Interact with Your Deployed Smart Contract
+    1. Create the KaseiCoin token contract
+    2. Create the KaseiCoin Crowdsale contract
+    3. Create the KaseiCoin deployer contract
+    4. Perform a real-world, pre-production test of your crowdsale by deploying to a local blockchain by using Remix, MetaMask, and Ganache.
 
 ---
 
 ## Evaluation Evidence
 
 ### 1. Compile & Deploy
+### 1. Create the KaseiCoin token contract
 
 ![compile & deploy gif](https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/compile%20%26%20Deploy%20JointSavings%20contract.gif)
 
 ### 2. Depositing
+### 2. Create the KaseiCoin Crowdsale contract
 
 ![deposit gif](https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/test%20account%20with%20three%20deposits.gif)
 
 ### 3. Withdrawing & Terminal Output
+### 3. Create the KaseiCoin deployer contract
 
 ![withdraw gif](https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/withdrawl%20function%20and%20terminal%20ouptut.gif)
 
