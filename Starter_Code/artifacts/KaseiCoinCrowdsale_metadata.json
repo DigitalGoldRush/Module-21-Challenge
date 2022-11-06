@@ -21,11 +21,51 @@
 						"internalType": "contract KaseiCoin",
 						"name": "token",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "goal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "open",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "close",
+						"type": "uint256"
 					}
 				],
 				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "CrowdsaleFinalized",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prevClosingTime",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newClosingTime",
+						"type": "uint256"
+					}
+				],
+				"name": "TimedCrowdsaleExtended",
+				"type": "event"
 			},
 			{
 				"anonymous": false,
@@ -64,6 +104,27 @@
 				"type": "fallback"
 			},
 			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": false,
 				"inputs": [
 					{
@@ -76,6 +137,165 @@
 				"outputs": [],
 				"payable": true,
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "cap",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "capReached",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "refundee",
+						"type": "address"
+					}
+				],
+				"name": "claimRefund",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "closingTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "finalize",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "finalized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "goal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "goalReached",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "hasClosed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "isOpen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "openingTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -137,15 +357,72 @@
 				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "beneficiary",
+						"type": "address"
+					}
+				],
+				"name": "withdrawTokens",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
 			"methods": {
+				"balanceOf(address)": {
+					"return": "the balance of an account."
+				},
 				"buyTokens(address)": {
 					"details": "low level token purchase ***DO NOT OVERRIDE*** This function has a non-reentrancy guard, so it shouldn't be called by another `nonReentrant` function.",
 					"params": {
 						"beneficiary": "Recipient of the token purchase"
 					}
+				},
+				"cap()": {
+					"return": "the cap of the crowdsale."
+				},
+				"capReached()": {
+					"details": "Checks whether the cap has been reached.",
+					"return": "Whether the cap was reached"
+				},
+				"claimRefund(address)": {
+					"details": "Investors can claim refunds here if crowdsale is unsuccessful.",
+					"params": {
+						"refundee": "Whose refund will be claimed."
+					}
+				},
+				"closingTime()": {
+					"return": "the crowdsale closing time."
+				},
+				"finalize()": {
+					"details": "Must be called after crowdsale ends, to do some extra finalization work. Calls the contract's finalization function."
+				},
+				"finalized()": {
+					"return": "true if the crowdsale is finalized, false otherwise."
+				},
+				"goal()": {
+					"return": "minimum amount of funds to be raised in wei."
+				},
+				"goalReached()": {
+					"details": "Checks whether funding goal was reached.",
+					"return": "Whether funding goal was reached"
+				},
+				"hasClosed()": {
+					"details": "Checks whether the period in which the crowdsale is open has already elapsed.",
+					"return": "Whether crowdsale period has elapsed"
+				},
+				"isOpen()": {
+					"return": "true if the crowdsale is open, false otherwise."
+				},
+				"openingTime()": {
+					"return": "the crowdsale opening time."
 				},
 				"rate()": {
 					"return": "the number of token units a buyer gets per wei."
@@ -186,10 +463,10 @@
 			]
 		},
 		"Module 21- Advanced Solidity/Module-21-Challenge/Starter_Code/KaseiCoinCrowdsale.sol": {
-			"keccak256": "0x9b5db42e410ab1beda27aa1d6dd2f5f383d272d14de0d34cc5937a898d5d504a",
+			"keccak256": "0xe62cf96dceaf12e9abfb498742b25c0f4326e97731773d76bec67ceb4e431a36",
 			"urls": [
-				"bzz-raw://02e1655fcfffc9822419541443ee14106858ad36975379dc773f2512b921534d",
-				"dweb:/ipfs/QmR35a2efiCJZN7TzBpnYfY2Ak2zysnYcJJ3qqE4DYsoSo"
+				"bzz-raw://a775c0a534a9229335216c44719348948a954b75fa7bf7b4fa673a9b0928de15",
+				"dweb:/ipfs/QmdijxGSMBAQSu3t2ih2QqN6anzRT9Q55tqBK2c8wYjySx"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/GSN/Context.sol": {
@@ -220,6 +497,34 @@
 				"dweb:/ipfs/QmWZF4DnkWZZYzVHz8pAxbLFRxmNiKWE2n1Chd4w2rXWYh"
 			]
 		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/distribution/FinalizableCrowdsale.sol": {
+			"keccak256": "0x22ad427395c439878122cbfbf13e896fd48d1fad0c6fc889a36b4f1bf4743ff4",
+			"urls": [
+				"bzz-raw://ac3d7abcb3ce59b3993ae46c3237e75fefad636c9befd692bcb5e212a03a7ca7",
+				"dweb:/ipfs/QmUur1SjJ4yyRTDELyfMZSqjkgBUjLzK8iRVx8YKuZiciz"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/distribution/PostDeliveryCrowdsale.sol": {
+			"keccak256": "0xe36a7e7cc13c7c63642e8f1a34beb43dd61cd6359f98093e7fab088206c18d0c",
+			"urls": [
+				"bzz-raw://d95f4e8ff65c1d896f12a9891d6cb6efa1f18dbf8fdaeb03f9cc314394d97fc5",
+				"dweb:/ipfs/QmPWqHtVJ7bZd6iBy5LD23ZctsZfv6qehLDzGFodCs1xTY"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/distribution/RefundableCrowdsale.sol": {
+			"keccak256": "0x51ff319b8ccbbed80ef2362ab98b473b705bf39d387610baadd7b9dd0353d85e",
+			"urls": [
+				"bzz-raw://852bbb1d2d7a14bda1771f44afd8bf7176b3520363cc52847daebd874d69a80e",
+				"dweb:/ipfs/QmPHK5aM8Eg5HEML427S2iAdqtcgpSUH1tQaEfXqx4X1ow"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/distribution/RefundablePostDeliveryCrowdsale.sol": {
+			"keccak256": "0xb48951d0d4ed06d06ac4b7889b7f585adf124d860107d96a24fc830f6ade9c8f",
+			"urls": [
+				"bzz-raw://83f53b56489821349e53eb6abb24b153eb401302a382b3cc809bd168a8875410",
+				"dweb:/ipfs/QmPRTXVzjZzALro3nQWphyJgpLCdBSFa9Ncg5UGMdEDumz"
+			]
+		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/emission/MintedCrowdsale.sol": {
 			"keccak256": "0x343249b95ade6a20737b7f681a05a257f14a39b21043ff2e31d8e5d861d83777",
 			"urls": [
@@ -227,11 +532,53 @@
 				"dweb:/ipfs/QmdyGt7hjQ3D6JFr1HRaqa2xjS3EZGFomnwsqfjKHckcqx"
 			]
 		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/validation/CappedCrowdsale.sol": {
+			"keccak256": "0x5ae16586a3b5e976aae1a08fdf109ead3840961aa0a1f5b4590d4adf5cdad3b5",
+			"urls": [
+				"bzz-raw://a0afb5b8fdd7fed75baae48c9f0c0c4c5650a152d245da5e790b4d091e261e51",
+				"dweb:/ipfs/QmQXSQcJeASMyDFm81CvodBP2vdDBKqVd7aT6vqTvVVNSP"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/validation/TimedCrowdsale.sol": {
+			"keccak256": "0x9407dd37cfed74aa107fd1614c478ba0a2bc3e084e9aa8fbd5a6f316c53aed3b",
+			"urls": [
+				"bzz-raw://d7d0b156b355c01268a533f127aed64c54f68e1e435efd76dc4ad7dd6138968a",
+				"dweb:/ipfs/QmQ6npy1tbtRT6g8NR7gRryu4VYYejVvdnSjgdjG8Z4qAc"
+			]
+		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/math/SafeMath.sol": {
 			"keccak256": "0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076",
 			"urls": [
 				"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f",
 				"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/ownership/Secondary.sol": {
+			"keccak256": "0xb55d511ea1d79aa4ff7063ac50d134a47c6d3b43b0ee7163e9310c403a945888",
+			"urls": [
+				"bzz-raw://3dbac745f30f95972c78216578173f098cf89fbcd7e976e26bcd6e8707553d61",
+				"dweb:/ipfs/Qme7K9o8sEYRcwUfe5VNnpbGGiTyPYbrSxZNUkm2qXJ9VK"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/payment/escrow/ConditionalEscrow.sol": {
+			"keccak256": "0xc43492ecb8d0eb86ba1ecc3f50e5474021ba58ec14c004c41c6f6550e6ceafc0",
+			"urls": [
+				"bzz-raw://48d58d185f7c958d8ede7b3310b54a28e7a38c0c5a3dcc3066947fc415c2125c",
+				"dweb:/ipfs/QmWqKyw2xk3Fw7wzLyeV8Z4r3HVitT4pmDDwhVcM2aJnEP"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/payment/escrow/Escrow.sol": {
+			"keccak256": "0xdb5c39b703e6c79e801e38efebe94c8cf3683bf369cc3131cb992fedd4157134",
+			"urls": [
+				"bzz-raw://882e9e89fafd80fd09639c83ad35bb8dc7877be31f9ec8cd540ea2aeac47cdf0",
+				"dweb:/ipfs/QmWtspuNDKZt9EAqXJCQELpufj6NV5L6czokqnVNdb3Yu4"
+			]
+		},
+		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/payment/escrow/RefundEscrow.sol": {
+			"keccak256": "0x83d02d923d47755b0a1a16c6f97a31e0de8378c6bbac42e8d69f388d84749a6c",
+			"urls": [
+				"bzz-raw://52ca23b230ac8222788a8878680c35487edc2b81ec8440d6a318e1f9310c326b",
+				"dweb:/ipfs/Qmaqm1gtFRdBGCujGazMjwmk2SaciqQxSFCnHTAf7Xv32e"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20.sol": {
