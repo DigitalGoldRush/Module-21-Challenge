@@ -19,27 +19,27 @@ In this project, we will create an ERC20 token using the OpenZeppelin Solidity l
 
 ### 1. Create the KaseiCoin token contract
 
-![compile gif](https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/compile%20%26%20Deploy%20JointSavings%20contract.gif)
+![gif](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/KaseiCoin%20Token%20Contract%20successfully%20compiled.gif)
 
 ### 2. Create the KaseiCoin Crowdsale contract
 
-![compile gif](https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/test%20account%20with%20three%20deposits.gif)
+![gif](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/KaseiCoin%20Crowdsale%20Contract%20compiler.gif)
 
 ### 3. Create the KaseiCoin deployer contract
 
-![gif](https://github.com/DigitalGoldRush/Module-20-Challenge/blob/main/Images/withdrawl%20function%20and%20terminal%20ouptut.gif)
+![gif](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/Kaisei%20coin%20Deployer%20contract%20successfully%20compiled%402x.jpg)
 
 ### 4. Deployment of contracts
 
-![gif](
+![gif](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/contract%20deployments.gif)
 
 ### 5. Buy KAI tokens/ Check total supply of minted tokens and amount raised in the Crowdsale contract
 
-![withdraw gif](
+![gif](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/buy%20KAI%20tokens.gif)
 
 ### 6. Transfer KAI tokens
 
-![withdraw gif](
+![gif](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/transfer%20KAI.gif)
 
 
 ---
