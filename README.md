@@ -6,6 +6,8 @@
 
 In this project, we will create an ERC20 token using the OpenZeppelin Solidity library. We will also create a crowdsale contract that will manage the entire process, allowing users to send ETH and get back KAI tokens. The contract will mint the tokens automatically and distribute them to buyers in one transaction.
 
+---
+
 ## 2. Steps Involved
 
     1. Create the KaseiCoin token contract
@@ -41,7 +43,6 @@ In this project, we will create an ERC20 token using the OpenZeppelin Solidity l
 
 ![gif](https://github.com/DigitalGoldRush/Module-21-Challenge/blob/main/Images/transfer%20KAI.gif)
 
-
 ---
 
 ## Technology Used
@@ -58,9 +59,6 @@ In this project, we will create an ERC20 token using the OpenZeppelin Solidity l
 
 [![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)](https://ethereum.org/en/developers/docs/evm/)
 
-## Remix IDE recommended for contract interaction
-
-[![Remix-IDE](https://img.shields.io/badge/Remix_IDE-1989b9?style=for-the-badge&logo=remix&logoColor=white)](https://remix.ethereum.org/)
 ---
 
 ## Contributors
